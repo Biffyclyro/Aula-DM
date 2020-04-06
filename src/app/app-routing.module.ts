@@ -10,6 +10,15 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },
+  {
+    path: 'listar-clientes',
+    loadChildren: () => import('./pages/principal/clientes/listar-clientes/listar-clientes.module').then( m => m.ListarClientesPageModule)
+  },
+  {
+    path: 'cadastrar-clientes',
+    loadChildren: () => import('./pages/principal/clientes/cadastrar-clientes/cadastrar-clientes.module')
+        .then( m => m.CadastrarClientesPageModule)
   }
 ];
 
